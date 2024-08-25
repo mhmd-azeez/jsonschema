@@ -3,22 +3,21 @@ package jsonschema
 import (
 	"fmt"
 	"net/url"
-	"os"
 	"strings"
 )
 
-var showDebug = os.Getenv("JSON_SCHEMA_DEBUG") == "1"
+// var showDebug = os.Getenv("JSON_SCHEMA_DEBUG") == "1"
 
 // schemaDebug provides a logging interface
 // which is off by defauly but can be activated
 // for debuging purposes
 func schemaDebug(message string, args ...interface{}) {
-	if showDebug {
-		if message[len(message)-1] != '\n' {
-			message += "\n"
-		}
-		fmt.Printf(message, args...)
-	}
+	// if showDebug {
+	// 	if message[len(message)-1] != '\n' {
+	// 		message += "\n"
+	// 	}
+	// 	fmt.Printf(message, args...)
+	// }
 }
 
 // SafeResolveURL resolves a string url against the current context url
